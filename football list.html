@@ -1,0 +1,32 @@
+<DOCTYPE html>
+    <head>
+        <title>football players list</title>
+    </head>
+    <body>
+        <ul id="players">
+            <li>pogba</li>
+            <li>martial</li>
+            <li id="myLI">rashford</li>
+            <li>lingard</li>
+            <li>de gea</li>
+        </ul>
+
+        <button type="button" onclick ="addThings()"> click to add</button>
+
+        <button type="button" onclick="removeThings()"> click to remove</button>
+
+        <script>
+            function removeThings() {
+                var list=document.getElementById("players");
+                list.removeChild(list.lastElementChild);
+            }
+
+            function addThings() {
+                var node = document.createElement("li");
+                var textNode = document.createTextNode("ole");
+                node.appendChild(textNode);
+                document.getElementById("players").appendChild(node);
+            }
+        </script>
+    </body>
+</html>
